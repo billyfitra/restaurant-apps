@@ -1,6 +1,6 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable prefer-destructuring */
-/* eslint-disable linebreak-style */
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
