@@ -106,7 +106,7 @@ body {
 
 .jumbotron {
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-    url("../../dist/images/heros/hero-image_2-1200.jpg");
+    url("../public/images/heros/hero-image_2-1200.jpg");
   background-position: top;
   min-height: 800px;
   width: 100%;
@@ -115,7 +115,6 @@ body {
   justify-content: center; 
   align-items: center; 
   font-size: 40px;
-
 }
 
 .tron__inner {
@@ -539,19 +538,19 @@ ul {
 @media (max-width: 1200px) {
   .jumbotron {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-      url("../../dist/images/heros/hero-image_2-1024.jpg");
+      url("../public/images/heros/hero-image_2-1024.jpg");
   }
 }
 @media (max-width: 1024px) {
   .jumbotron {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-      url("../../dist/images/heros/hero-image_2-768.jpg");
+      url("../public/images/heros/hero-image_2-768.jpg");
   }
 }
 @media (max-width: 768px) {
   .jumbotron {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-      url("../../dist/images/heros/hero-image_2-480.jpg");
+      url("../public/images/heros/hero-image_2-480.jpg");
   }
 }
 

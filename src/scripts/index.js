@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
 /* eslint-disable linebreak-style */
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-alert */
@@ -29,7 +31,7 @@ window.addEventListener('hashchange', () => {
     app.renderPage();
 });
 
-window.addEventListener('load', () => {
+window.addEventListener('load', async () => {
     app.renderPage();
     registerServiceWorker();
 });

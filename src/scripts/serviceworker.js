@@ -3,19 +3,19 @@ import CacheHelper from './utils/stash-helper';
 
 const assetsToCache = [
     '/',
-    '/index.html',
-    '/favicon.ico',
+    '/templates/index.html',
+    '/public/favicon.png',
     '/app.bundle.js',
-    '/app.webmanifest',
+    '/public/app.webmanifest',
     '/sw.bundle.js',
-    '/icons/72.jpg',
-    '/icons/96.jpg',
-    '/icons/128.jpg',
-    '/icons/144.jpg',
-    '/icons/152.jpg',
-    '/icons/192.jpg',
-    '/icons/384.jpg',
-    '/icons/512.jpg',
+    '/public/icons/72.png',
+    '/public/icons/96.png',
+    '/public/icons/128.png',
+    '/public/icons/144.png',
+    '/public/icons/152.png',
+    '/public/icons/192.png',
+    '/public/icons/384.png',
+    '/public/icons/512.png',
 ];
 
 self.addEventListener('install', (event) => {

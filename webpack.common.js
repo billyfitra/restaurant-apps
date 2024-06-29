@@ -33,7 +33,6 @@ module.exports = {
         ],
     },
     plugins: [
-
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: path.resolve(__dirname, 'src/templates/index.html'),
@@ -42,14 +41,19 @@ module.exports = {
             patterns: [
                 {
                     from: path.resolve(__dirname, 'src/public/'),
-                    to: path.resolve(__dirname, 'dist/'),
+                    to: path.resolve(__dirname, 'dist/public/'),
                     globOptions: {
                         ignore: ['**/images/**'],
                     },
                 },
             ],
         }),
-        new BundleAnalyzerPlugin(),
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'server',
+            analyzerHost: '127.0.0.1',
+            analyzerPort: 8888,
+            openAnalyzer: true,
+        }),
         new WorkboxWebpackPlugin.GenerateSW({
             swDest: './sw.bundle.js',
             skipWaiting: true,
@@ -68,4 +72,27 @@ module.exports = {
             ],
         }),
     ],
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+            minSize: 20000,
+            maxSize: 70000,
+            minChunks: 1,
+            maxAsyncRequests: 30,
+            maxInitialRequests: 30,
+            automaticNameDelimiter: '~',
+            enforceSizeThreshold: 50000,
+            cacheGroups: {
+                defaultVendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    priority: -10,
+                },
+                default: {
+                    minChunks: 2,
+                    priority: -20,
+                    reuseExistingChunk: true,
+                },
+            },
+        },
+    },
 };
